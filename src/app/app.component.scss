@@ -1,0 +1,62 @@
+#bgimg{
+    // background-image:url('../assets/clock-placed-petals.jpg');
+    // background-size: 2100px 850px;
+    // background-size: 100vw 100vh; /* Full viewport size */
+    background-size: cover;
+    background-color:rgb(235, 235, 230);
+    // background-position: left;
+    background-repeat: no-repeat;
+  
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+
+}
+.row{
+
+    // border: 2px solid  green;
+    // background-color: lavenderblush;
+    border: 2px solid gray;
+    height: 650px;
+    width:1300px;
+   margin-top: 15px;
+   margin-left: 100px;
+   opacity: 0.9;
+
+}
+h2{
+    font-size: 32px;
+    margin-top: 5px;
+    // text-shadow: 0 0 8px #00F, 0 0 16px #00F, 0 0 24px #00F; /* Blue glow */
+    // text-shadow: 0 0 3px #FFC0CB, 0 0 6px #FFC0CB; /* Subtle yellow glow */
+    text-align: justify;
+}
+
+
+
+
+// #removeTask{
+
+//         padding: 2px 5px; /* Small padding for a compact design */
+//         font-size: 11px; /* Smaller font size for the text */
+//         line-height: 1; /* Tighter line-height for a compact appearance */
+//         border-radius: 3px; /* Optional: rounded corners */
+//         // border: 1px solid #007bff; /* Border for definition */
+//         // background-color: #007bff; /* Background color */
+//         color: white; /* Text color */
+//         cursor: pointer; /* Pointer cursor on hover */
+//         outline: none; /* Removes outline to keep styling clean */
+//     }
+#removeTask{
+  
+    float: inline-end;
+
+}
+
+#totalTask{
+
+    font-size: 14px;
+    text-transform: capitalize;
+    
+}
+ 

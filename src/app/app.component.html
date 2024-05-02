@@ -1,0 +1,90 @@
+<div id="bgimg">
+
+  <div class="container-fluid p-5">
+    <div class="row">
+      <div class="col-sm-5" style="background-color:lavender;">
+
+        <h2 class="text-center">Add Task</h2>
+
+        <form (submit)="false" class="p-2">
+
+          <div class="form-group">
+            <label for="Task">Enter Task</label>
+            <input type="text" class="form-control" maxlength="15" [(ngModel)]="taskName" name="taskName" placeholder="Enter Task">
+          </div>
+
+          <div class="form-group">
+            <label for="Date">Select Date</label>
+            <input type="datetime-local" class="form-control" [(ngModel)]="taskDate" name="taskDate"
+              placeholder="Enter Date">
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="Time">Select Time</label>
+            <input type="time" class="form-control" [(ngModel)]="taskTime" name="taskTime" placeholder="Enter Time">
+          </div> -->
+
+          <div class="form-group">
+            <label for="Description">Description</label><br>
+            <textarea class="form-control" id="" rows="2" [(ngModel)]="taskDescription" name="taskDescription"
+              placeholder="Enter Description"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="TaskAssignTo">Task Assign To</label>
+            <select class="form-control" [(ngModel)]="taskAssignTo" name="taskAssignTo">
+              <option value="">Select</option>
+              <option value="Consultant">Consultant</option>
+              <option value="Associate">Associate</option>
+              <option value="Senior Consultant">Senior Consultant</option>
+              <option value="Internee">Internee</option>
+            </select>
+          </div>
+
+          <button type="button" class="btn btn-primary"
+            (click)="addTask(taskName, taskDate, taskAssignTo, taskDescription)">Add Task</button>
+        </form>
+      </div>
+
+      <div class="col-sm-4" style="background-color:lavenderblush;">
+        <h2 class="text-center">Total Task</h2>
+
+        <div id="totalTask" class="p-2">
+
+          <ul *ngFor="let item of list">
+            <li>{{item.name}} - {{item.date | date:'mediumDate'}} {{item.taskTime}}
+
+        
+
+                <button id="removeTask" class="btn btn-outline-danger btn-sm" (click)="removeTask(item.id)">Remove Task</button>
+
+       
+
+            </li>
+            <hr>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="col-sm-3" style="background-color:lavender;">
+        <h2 class="text-center">Task Performed</h2>
+
+        <div id="PerformedTask" class="p-2">
+
+          <ul *ngFor="let item of scheduledTasks">
+            <li>{{item}}
+            </li>
+            <hr>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
